@@ -18,8 +18,8 @@ class MyEventDispacther(EventDispatcher):
 
 # Driver code
 
-def my_callback(valuse, *arge):
-    print("This is the sample callback driver")
+def my_callback(valuse, *args):
+    print("This is the sample callback driver ",args)
 
 evd = MyEventDispacther()
 evd.bind(on_callback=my_callback)
