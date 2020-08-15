@@ -33,7 +33,12 @@ class CustomLabel(Label):
 class MainApp(App):
     def build(self):
         a = CustomLabel()
+        a.bind(n=self.my_n_handler)
         return a
+
+    def my_n_handler(self, instance, pos):
+        # print("Instance : ", instance, "\tPos : ", str(pos))
+        instance.text = instance.text+" External Handler present too"
 
 if __name__=='__main__':
     MainApp().run()
