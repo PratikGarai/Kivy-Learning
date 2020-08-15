@@ -20,7 +20,7 @@ class CustomButton(Button):
         if self.collide_point(*touch.pos):
             self.txt = "Up"
             return True
-        return super(CustomButton, self).on_touch_down(touch) #repropagate
+        return super(CustomButton, self).on_touch_up(touch) #repropagate
 
     def on_txt(self, instance, pos):
         self.text=self.txt
