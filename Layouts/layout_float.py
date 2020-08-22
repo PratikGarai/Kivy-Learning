@@ -1,15 +1,15 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.config import Config
 
 Config.set('graphics','height',600)
 Config.set('graphics','width',600)
 
-Builder.load_file('layout_box.kv')
+Builder.load_file('layout_float.kv')
 
-class Layout(BoxLayout):
+class Layout(FloatLayout):
     pass
 
 class MainApp(App):
